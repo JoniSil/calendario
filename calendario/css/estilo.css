@@ -1,0 +1,201 @@
+@import url('http://fonts.googleapi.com/css?family');
+
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #352b48;
+	font-family: 'Poppins' sans-serif;
+}
+
+ul li a {
+	font-size: 0.9em;
+	padding: 3px;
+	display: block;
+	line-height: 30px;
+	color: red;
+	text-decoration: none;
+	border-bottom: 1px solid #f3f3f3;
+ 	
+}
+
+.calendario {
+	position: relative;
+	background: #fff;
+	width: 800px;
+	height: 450px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 15px solid #fff;
+	box-shadow: 0 15px 35px rgba(0, 0, 0,.5);
+}
+
+.calendario .data {
+	width: 400px;
+	padding: 30px;
+	box-sizing: border-box;
+}
+
+.calendario .data h3 {
+	margin: 0 0 20px;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.calendario .data .dias  {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.calendario .data .dias .dia,
+.calendario .data .dias .numero {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calendario .data .dias .dia:first-child,
+.calendario .data .dias .numero:nth-child(7n+1) {
+	color: #f44336;
+	font-weight: 600;
+}
+
+
+
+.calendario .imagem {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 400px;
+	height: 100%;
+	background: #000;
+}
+
+.calendario .imagem img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+
+
+#footer {
+	align-items: center;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100% auto;
+	bottom: 0;
+	
+	margin: 0 auto;
+	color: #fff;
+}
+
+#barra-lateral  {
+	float: right;
+	padding: 20px;
+
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul a {
+	width: 60px;
+	height: 40px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	text-indent: 7px;
+	line-height: 40px;
+	background:color yellow;
+}
+
+a:hover, .selecionado a {
+	background-position: right bottom;
+	background-color: blue;
+	color: #fff;
+}
+
+#janeiro #navegacao .janeiro a,
+#fevereiro #navegacao .fevereiro a,
+#marco #navegacao .marco a,
+#abril #navegacao .abril a,
+#maio #navegacao .maio a,
+#junho #navegacao .junho a,
+#julho #navegacao .julho a,
+#agosto #navegacao .agosto a,
+#setembro #navegacao .setembro a,
+#outubro #navegacao .outubro a,
+#novembro #navegacao .novembro a,
+#dezembro #navegacao .dezembro a
+ {
+	background-position: right bottom;
+	background-color: green;
+	color: #fff;
+}
+
+.hora {
+	padding: 15px;
+	align-items: center;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100% auto;
+	bottom: 0;
+	
+	margin: 0 auto;
+	color: #fff;
+}
+
+.hora2 {
+	padding: 45px;
+	align-items: center;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100% auto;
+	bottom: 0;
+	
+	margin: 0 auto;
+	color: #fff;
+
+}
+
+#menu ul li a {
+	justify-content: space-between;
+	display: flex;
+	justify-content: center;
+	margin-right: 800px;
+	 top: -300px;
+
+	position: relative;
+	right: 100px;
+	z-index: ;
+	
+	width: px;
+	height: px;
+
+}
+
+
+
+
+
+
+

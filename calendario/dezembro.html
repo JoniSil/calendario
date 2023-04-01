@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calendário</title>
+	<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+		<script type="text/javascript">
+			jQuery(window).load(function($){
+				atualizaRelogio();
+			});
+		</script>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body id="dezembro">
+	<div class="calendario">
+		<div class="data">
+			<h3>Dezembro</h3>
+			<div class="dias">
+			<div class="dia">D</div>
+			<div class="dia">S</div>
+			<div class="dia">T</div>
+			<div class="dia">Q</div>
+			<div class="dia">Q</div>
+			<div class="dia">S</div>
+			<div class="dia">S</div>
+			<div class="numero"></div>
+			<div class="numero"></div>
+			<div class="numero"></div>
+			<div class="numero"></div>
+			<div class="numero"></div>
+			<div class="numero">1</div>
+			<div class="numero">2</div>
+			<div class="numero">3</div>
+			<div class="numero">4</div>
+			<div class="numero">5</div>
+			<div class="numero">6</div>
+			<div class="numero">7</div>
+			<div class="numero">8</div>
+			<div class="numero">9</div>
+			<div class="numero">10</div>
+			<div class="numero">11</div>
+			<div class="numero">12</div>
+			<div class="numero">13</div>
+			<div class="numero">14</div>
+			<div class="numero">15</div>
+			<div class="numero">16</div>
+			<div class="numero">17</div>
+			<div class="numero">18</div>
+			<div class="numero">19</div>
+			<div class="numero">20</div>
+			<div class="numero">21</div>
+			<div class="numero">22</div>
+			<div class="numero">23</div>
+			<div class="numero">24</div>
+			<div class="numero">25</div>
+			<div class="numero">26</div>
+			<div class="numero">27</div>
+			<div class="numero">28</div>
+			<div class="numero">29</div>
+			<div class="numero">30</div>
+			<div class="numero">31</div>
+
+			</div>
+
+		</div>
+		<div class="imagem">
+			<img src="./imagens/fundo-23.jpg">
+		</div>
+
+
+
+	</div>
+		<div >
+		 <ul id="navegacao" style="list-style: none;">
+									<li class="janeiro">
+										<a href="janeiro.html">Janeiro</a>
+									</li>
+									
+									<li class="fevereiro">
+										<a href="fevereiro.html">Fevereiro</a>
+									</li>
+
+									<li class="marco">
+										<a href="marco.html">Março</a>
+									</li>
+
+									<li class="abril">
+										<a href="abril.html">Abril</a>
+									</li>
+
+									<li class="maio">
+										<a href="maio.html">Maio</a>
+									</li>
+
+									<li class="junho">
+										<a href="junho.html">Junho</a>
+									</li>
+
+									<li class="julho">
+										<a href="julho.html">Julho</a>
+									</li>
+
+									<li class="agosto">
+										<a href="agosto.html">Agosto</a>
+									</li>
+
+									<li class="setembro">
+										<a href="setembro.html">Setembro</a>
+									</li>
+
+									<li class="outubro">
+										<a href="outubro.html">Outubro</a>
+									</li>
+
+									<li class="novembro">
+										<a href="novembro.html">Novembro</a>
+									</li>
+
+									<li class="dezembro">
+										<a href="dezembro.html">Dezembro</a>
+									</li>
+
+									
+									
+
+							</ul>
+				</div>	
+				<div class="hora">
+			<output id="data" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>
+		</div>
+		<div class="hora2">
+			<output id="hora" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>				
+		</div>				
+
+	<footer id="footer">
+		<div>
+		&copy; Copyright 2000-2018 Jonathan
+		</div>
+	</footer>
+
+
+		
+
+</body>
+<script>
+		function atualizaRelogio(){ 
+			var momentoAtual = new Date();
+			
+			var vhora = momentoAtual.getHours();
+			var vminuto = momentoAtual.getMinutes();
+			var vsegundo = momentoAtual.getSeconds();
+			
+			var vdia = momentoAtual.getDate();
+			var vmes = momentoAtual.getMonth() + 1;
+			var vano = momentoAtual.getFullYear();
+			
+			if (vdia < 10){ vdia = "0" + vdia;}
+			if (vmes < 10){ vmes = "0" + vmes;}
+			if (vhora < 10){ vhora = "0" + vhora;}
+			if (vminuto < 10){ vminuto = "0" + vminuto;}
+			if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+
+			dataFormat = vdia + " / " + vmes + " / " + vano;
+			horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+
+			document.getElementById("data").innerHTML = dataFormat;
+			document.getElementById("hora").innerHTML = horaFormat;
+
+			setTimeout("atualizaRelogio()",1000);
+		}
+	</script>	
+</html>
